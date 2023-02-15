@@ -18,11 +18,11 @@ Avo.configure do |config|
     AvoUser.new("Hassyyy's Expense Manager")
   end
   include ActionController::HttpAuthentication::Basic
-  # config.authenticate_with do
-  #   username = ENV['EM_USERNAME'] || 'username'
-  #   password = ENV['EM_PASSWORD'] || 'password'
-  #   http_basic_authenticate_or_request_with name: username, password: password
-  # end
+  config.authenticate_with do
+    username = ENV['EM_USERNAME'] || 'username'
+    password = ENV['EM_PASSWORD'] || 'password'
+    http_basic_authenticate_or_request_with name: username, password: password
+  end
 
   ## == Authorization ==
   # config.authorization_methods = {
@@ -39,7 +39,7 @@ Avo.configure do |config|
   # config.locale = 'en-US'
 
   ## == Customization ==
-  # config.app_name = 'Avocadelicious'
+  config.app_name = "Hassyyy's Expense Manager"
   # config.avo_title = 'Hassyyy'
   config.timezone = 'IST'
   # config.currency = 'USD'

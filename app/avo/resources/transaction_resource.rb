@@ -19,5 +19,6 @@ class TransactionResource < Avo::BaseResource
   # filter CreditCardFilter
   filter ResolvedFilter
   action Expensify
+  action Saving
   action Resolve
 end

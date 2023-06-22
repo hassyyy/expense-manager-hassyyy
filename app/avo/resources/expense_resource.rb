@@ -23,4 +23,5 @@ class ExpenseResource < Avo::BaseResource
 
   # filter MonthFilter
   # filter YearFilter
+  action Saving
 end

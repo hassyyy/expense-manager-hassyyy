@@ -1,7 +1,7 @@
 class ExpenseResource < Avo::BaseResource
   self.title = :name
   self.includes = []
-  self.record_selector = false
+  self.record_selector = true
   self.after_create_path = :index
   self.after_update_path = :index
 

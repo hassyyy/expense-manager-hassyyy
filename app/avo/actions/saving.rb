@@ -1,5 +1,5 @@
-class Saving < Avo::BaseAction
-  self.name = 'Saving'
+class Save < Avo::BaseAction
+  self.name = 'Save'
 
   def handle(**args)
     models, fields, current_user, resource = args.values_at(:models, :fields, :current_user, :resource)

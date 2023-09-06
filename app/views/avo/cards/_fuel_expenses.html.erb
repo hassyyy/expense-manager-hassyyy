@@ -11,8 +11,8 @@
     <% month = date.strftime("%b") %>
     <% year = date.strftime("%Y") %>
     <% expenses = Expense.where(month: month, year: year.to_i) %>
-    <% paid = expenses.where(name: 'Petrol - Car').first&.amount || 0 %>
-    <% recovered = expenses.where(name: 'QuickRide').first&.amount || 0 %>
+    <% paid = expenses.where(name: 'Petrol - Car').sum(:amount) %>
+    <% recovered = expenses.where(name: 'Car Pool', income: true).sum(:amount) %>
     <% spent = paid - recovered %>
 
     <tr class='data'>

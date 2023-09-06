@@ -3,23 +3,23 @@
 <table>
   <tr>
     <th> Month </th>
-    <th> Spent </th>
+    <th> Paid </th>
     <th> Recovered </th>
-    <th> Balance </th>
+    <th> Spent </th>
   </tr>
   <% last_12_months.each do |date| %>
     <% month = date.strftime("%b") %>
     <% year = date.strftime("%Y") %>
     <% expenses = Expense.where(month: month, year: year.to_i) %>
-    <% spent = expenses.where(name: 'Petrol - Car').first&.amount || 0 %>
+    <% paid = expenses.where(name: 'Petrol - Car').first&.amount || 0 %>
     <% recovered = expenses.where(name: 'QuickRide').first&.amount || 0 %>
-    <% balance = spent - recovered %>
+    <% spent = paid - recovered %>
 
     <tr class='data'>
       <th> <%= "#{month} #{year}"%> </th>
+      <th> <%= paid.zero? ? '-' : "₹#{paid}" %> </th>
       <th> <%= recovered.zero? ? '-' : "₹#{recovered}" %> </th>
       <th> <%= spent.zero? ? '-' : "₹#{spent}" %> </th>
-      <th> <%= balance.zero? ? '-' : "₹#{balance}" %> </th>
     </tr>
   <% end %>
 </table>

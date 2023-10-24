@@ -1,3 +1,5 @@
+include ActionView::Helpers::NumberHelper
+
 class AccountBalanceMetric < Avo::Dashboards::MetricCard
   self.id = 'account_balance_metric'
   self.label = 'Account Balance'

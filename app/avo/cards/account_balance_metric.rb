@@ -15,6 +15,6 @@ class AccountBalanceMetric < Avo::Dashboards::MetricCard
       card.transactions.where(month: card.current_month.strftime("%b"), year: card.current_month.year).sum(:amount)
     end
 
-    result (balance - credit_card_balances)
+    result number_to_currency(balance - credit_card_balances, AppOptions::CURRENCY_FORMAT.merge(format: "%n"))
   end
 end

@@ -13,6 +13,6 @@ class CurrentBalanceMetric < Avo::Dashboards::MetricCard
     income = Expense.where(income: true).sum(:amount)
     expenses = Expense.where(income: false).sum(:amount)
 
-    result (income - expenses)
+    result number_to_currency(income - expenses, AppOptions::CURRENCY_FORMAT.merge(format: "%n"))
   end
 end

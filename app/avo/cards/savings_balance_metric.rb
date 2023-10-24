@@ -14,4 +14,5 @@ class SavingsBalanceMetric < Avo::Dashboards::MetricCard
     expenses = Saving.where(income: false).sum(:amount)
 
     result number_to_currency(income - expenses, AppOptions::CURRENCY_FORMAT.merge(format: "%n"))
+  end
 end

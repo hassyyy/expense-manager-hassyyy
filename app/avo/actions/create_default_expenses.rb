@@ -31,8 +31,8 @@ class CreateDefaultExpenses < Avo::BaseAction
       amount: 500,
       income: false
     },
-    'Heroku': {
-      amount: 400,
+    'Heroku & AWS': {
+      amount: 750,
       income: false
     }
   }

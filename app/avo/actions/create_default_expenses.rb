@@ -28,7 +28,7 @@ class CreateDefaultExpenses < Avo::BaseAction
       income: false
     },
     'Netflix': {
-      amount: 500,
+      amount: 200,
       income: false
     },
     'Heroku & AWS': {

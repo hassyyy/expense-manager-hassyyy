@@ -9,7 +9,7 @@ class CreateDefaultExpenses < Avo::BaseAction
     },
     'Car - Pooling': {
       amount: 0,
-      income: true
+      income: false
     },
     'Groceries': {
       amount: 0,

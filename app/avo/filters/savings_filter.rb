@@ -3,7 +3,7 @@ class SavingsFilter < Avo::Filters::BooleanFilter
 
   def apply(request, query, values)
     if values['is_invested']
-      query = query.where(invested: true)
+      query = query.where(investment: true)
     end
     
     if values['is_lent']

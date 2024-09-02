@@ -1,5 +1,5 @@
 class SavingsFilter < Avo::Filters::BooleanFilter
-  self.name = 'SavingsFilter'
+  self.name = 'Savings'
 
   def apply(request, query, values)
     if values['is_invested']

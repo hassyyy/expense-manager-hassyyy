@@ -2,6 +2,7 @@ class CurrentBalanceMetric < Avo::Dashboards::MetricCard
   self.id = 'current_balance_metric'
   self.label = 'Current Balance'
   self.prefix = '₹'
+  self.cols = 2
 
   query do
     income = Expense.where(income: true).sum(:amount)

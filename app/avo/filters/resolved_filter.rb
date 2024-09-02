@@ -2,7 +2,7 @@ class ResolvedFilter < Avo::Filters::SelectFilter
   self.name = 'Resolved'
 
   def apply(request, query, values)
-    return query if values['is_resolved'] && values['is_unfeatured']
+    return query if values['is_resolved'] && values['is_unresolved']
 
     if values['is_resolved']
       query = query.where(resolved: true)

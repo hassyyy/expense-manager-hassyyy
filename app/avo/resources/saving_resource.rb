@@ -13,4 +13,8 @@ class SavingResource < Avo::BaseResource
     "#{model.month} #{model.year}"
   end
   field :income, as: :boolean, default: false, hide_on: [:index]
+  field :investment, as: :boolean, default: false, hide_on: [:index]
+  field :lent, as: :boolean, default: false, hide_on: [:index]
+
+  filter SavingsFilter
 end

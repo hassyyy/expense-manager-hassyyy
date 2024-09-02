@@ -4,6 +4,7 @@ class AccountBalanceMetric < Avo::Dashboards::MetricCard
   self.id = 'account_balance_metric'
   self.label = 'Account Balance'
   self.prefix = '₹'
+  self.cols = 2
 
   query do
     balance = Balance.sum(:amount)

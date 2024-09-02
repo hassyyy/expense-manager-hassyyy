@@ -1,7 +1,8 @@
-class SavingsBalanceMetric < Avo::Dashboards::MetricCard
-  self.id = 'savings_balance_metric'
-  self.label = 'Savings Balance'
+class SavingsAccountBalanceMetric < Avo::Dashboards::MetricCard
+  self.id = 'savings_account_balance_metric'
+  self.label = 'Account Balance'
   self.prefix = '₹'
+  self.cols = 2
 
   query do
     income = Saving.where(income: true).sum(:amount)

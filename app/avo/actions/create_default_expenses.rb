@@ -4,7 +4,7 @@ class CreateDefaultExpenses < Avo::BaseAction
 
   DEFAULT_EXPENSES = {
     'Salary': {
-      amount: 30000,
+      amount: 35000,
       income: true
     },
     'Car - Pooling': {
@@ -34,6 +34,14 @@ class CreateDefaultExpenses < Avo::BaseAction
     'Heroku & AWS': {
       amount: 750,
       income: false
+    },
+    'Apple Storage': {
+      amount: 75,
+      income: false
+    },
+    'Spotify': {
+      amount: 120,
+      income: false
     }
   }
 
@@ -52,6 +60,14 @@ class CreateDefaultExpenses < Avo::BaseAction
         year: year
       )
     end
+
+    Saving.create(
+      name: "Salary",
+      amount: 40000,
+      income: true,
+      month: month,
+      year: year
+    )
 
     succeed 'Default expenses created successfully'
   end

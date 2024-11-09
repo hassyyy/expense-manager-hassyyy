@@ -63,7 +63,7 @@ class CreateDefaultExpenses < Avo::BaseAction
 
     Saving.create(
       name: "Salary",
-      amount: 40000,
+      amount: 45000,
       income: true,
       month: month,
       year: year

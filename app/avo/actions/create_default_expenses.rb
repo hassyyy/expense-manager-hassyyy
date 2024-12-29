@@ -4,7 +4,7 @@ class CreateDefaultExpenses < Avo::BaseAction
 
   DEFAULT_EXPENSES = {
     'Salary': {
-      amount: 35000,
+      amount: 33500,
       income: true
     },
     'Car - Pooling': {
@@ -20,10 +20,6 @@ class CreateDefaultExpenses < Avo::BaseAction
       income: false
     },
     'Petrol - Car': {
-      amount: 0,
-      income: false
-    },
-    'Office - Food Court': {
       amount: 0,
       income: false
     },

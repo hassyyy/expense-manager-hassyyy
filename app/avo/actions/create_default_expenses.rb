@@ -34,10 +34,6 @@ class CreateDefaultExpenses < Avo::BaseAction
     'Apple Storage': {
       amount: 75,
       income: false
-    },
-    'Spotify': {
-      amount: 120,
-      income: false
     }
   }
 
@@ -59,7 +55,7 @@ class CreateDefaultExpenses < Avo::BaseAction
 
     Saving.create(
       name: "Salary",
-      amount: 45000,
+      amount: 75000,
       income: true,
       month: month,
       year: year

@@ -4,7 +4,7 @@ class CreateDefaultExpenses < Avo::BaseAction
 
   DEFAULT_EXPENSES = {
     'Salary': {
-      amount: 33500,
+      amount: 35000,
       income: true
     },
     'Car - Pooling': {
@@ -17,6 +17,10 @@ class CreateDefaultExpenses < Avo::BaseAction
     },
     'Snacks': {
       amount: 0,
+      income: false
+    },
+    'Petrol - Bike': {
+      amount: 500,
       income: false
     },
     'Petrol - Car': {
@@ -51,7 +55,7 @@ class CreateDefaultExpenses < Avo::BaseAction
 
     Saving.create(
       name: "Salary",
-      amount: 75000,
+      amount: 50000,
       income: true,
       month: month,
       year: year

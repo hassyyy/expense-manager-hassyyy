@@ -64,8 +64,8 @@ Avo.configure do |config|
     section "Banking", icon: "heroicons/solid/currency-rupee" do
       resource :balance
       resource :expense
-      resource :transaction
       resource :credit_card
+      resource :transaction
       resource :saving
       resource :loan
     end

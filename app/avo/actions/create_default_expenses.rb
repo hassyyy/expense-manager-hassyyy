@@ -24,7 +24,7 @@ class CreateDefaultExpenses < Avo::BaseAction
       income: false
     },
     'Heroku & AWS': {
-      amount: 750,
+      amount: 820,
       income: false
     },
     'Apple Storage': {

@@ -60,7 +60,7 @@ Avo.configure do |config|
   config.main_menu = -> {
     dashboard :home_dashboard
     dashboard :monthly_expenses_dashboard
-    # dashboard :fuel_expenses_dashboard
+    dashboard :monthly_savings_dashboard
     section "Banking", icon: "heroicons/solid/currency-rupee" do
       resource :balance
       resource :expense
